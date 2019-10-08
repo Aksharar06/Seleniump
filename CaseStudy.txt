@@ -1,0 +1,315 @@
+Case Study 1:
+Feature: Register in flipkart website
+
+ 
+
+        
+Scenario : Click on register to be a valid user
+
+1. Goto  flipkart.com
+2. User should select register link
+ 	1. Identify the register link           link text="register"
+		<a href="/account/login?ret=/">Login &amp; Signup</a>
+
+		<a class="oZoRPi" href="/account/login?signup=true">New to Flipkart? Create an account</a>
+
+3. Fill the required fields(Use different locators for different elements
+	1. Identify the field to fill First name   
+		<input maxlength="63" type="text" name="firstname" value="" id="firstname" size="32" class="fld wide wide fld regular-text bold-text float-box" v="1" t="1" a="1" aria-autocomplete="none" aria-required="true" data-state="error" aria-invalid="true" aria-describedby="firstname_w">           
+	2. Type the string input "Abinaya" 
+
+	3. Identify the field to fill Last name  
+		<input maxlength="63" type="text" name="lastname" value="" id="lastname" size="32" class="fld wide wide fld regular-text bold-text float-box" v="1" t="1" a="1" aria-autocomplete="none" aria-required="true" data-state="error" aria-invalid="false" aria-describedby="">            
+	4. Type the string input "Mohan"
+
+	5. Identify the field to fill Email       
+       		<input maxlength="64" type="text" name="email" value="" id="email" size="32" class=" wide fld regular-text bold-text float-box" v="1" t="1" a="1" oncopy="return false" aria-required="true" data-state="error" aria-invalid="false" aria-describedby="">
+	6. Type the string input "abi@gmail.com"
+
+	7. Identify the field to fill Password  
+		<input maxlength="64" type="password" name="PASSWORD" value="" id="PASSWORD" size="32" class="re-w3 wide  wide fld regular-text bold-text float-box" aria-describedby="PASSWORD_helper" v="1" t="1" a="1" aria-autocomplete="none" oncopy="return false" autocomplete="off" aria-required="true" data-required-rules="3" data-state="inactive" style="padding-right: 81px">           
+	8. Type the string input "Abi"
+
+4. Click on register
+		1. Identify the  "Create account" button
+			<button id="ppaFormSbtBtn" type="submit" class="btn btn--primary">Create account</button>
+                2. Click "Create account" button to finish registration
+
+	<input type="text" maxlength="10" autocomplete="off" class="_2zrpKA _1dBPDZ" value="">
+
+	<button class="_2AkmmA _1LctnI _7UHT_c" type="submit" xpath="1"><div class="_2VTdOs _1_qmw3"><svg class="_2zN0mv" viewBox="25 25 50 50"><circle stroke="#fff" class="_1VgS7d" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10"></circle></svg></div><span>CONTINUE</span></button>
+
+
+Case Study 2: // Example for Radio Button & Check Boxes.
+1. Goto http://destinationqa.com/aut/RadioButtons.html
+
+2. User should select "Monday" Radio Button
+	1. Identify the radio button whose value is "Monday"
+		<input name="groupName" type="radio" value="Mon">
+	2. Select the radio button "Monday"
+
+3. Check Yellow & Orange check box
+	1. Identify the checkbox whose value is Yellow & Orange
+		<input name="orange" type="checkbox">
+		<input checked="checked" name="yellow" type="checkbox">
+	2. Check the Yellow & Orange checkbox 
+
+Case Study 3: // Example for Navigate()
+1. Goto Rediff.com
+
+2. Get & print the title of the home page
+	1. Get the title of the home page using navigate().to() and getTitle() method
+	2. Store that title as "Home page" (String)
+
+3. Click on Sign in
+	1. Identify "Sign in" partial text in the page
+		<a href="https://mail.rediff.com/cgi-bin/login.cgi" title="Already a user? Sign in" class="signin">Sign in</a>
+	2. Click on the "Sign in" link
+
+4. Get& Print the title of the Login page
+	1. Get the title of the login page using navigate().to() and getTitle() method
+	2. Store that title as "Login page" (String)
+
+5. Go Back to the previous page using navige method 
+	1. Get the title of the previous page using navigate().back() and getTitle() method
+	
+6. get the title & check if it same as home page
+	1. Store that title as "Prev page" (String)
+	2. Compare the strings "Prev page" and "Home page"
+
+7. Use forward method & get the page title & check if it same as Login page
+	1. Get the title of the forwarded page using navigate().to() and getTitle() method
+	2. Store that title as "Fwd page" (String)
+	3. Compare the strings "Fwd page" and "Login page"
+8. Close all the browser entities.
+	1. Close the browser entries using close() method.
+
+
+
+Case Study 4: // Example for getAttribute()
+1. Goto ebay.in
+2. Get all the attribute values of the register link as per the HTML design.
+	1. Identify the register link in the page and inspect for the attributes available.
+	2. Use getAttribute() method to get the values of the attribute. 
+		<a href="https://reg.ebay.com/reg/PartialReg?ru=https%3A%2F%2Fin.ebay.com%2F" _sp="m570.l2621">register</a>
+
+
+
+
+Case Study 5: // getTitle() and Explicit wait based on the Title
+1. Goto Google
+
+2. Search for Automation Testing
+	1. Identify the search box.
+	2. Type the string "Automation Testing" in the search box.
+
+3. Click on Search button
+	1. Use the submit() method to start the search.
+		<input id="fakebox-input" autocomplete="off" tabindex="-1" type="url" aria-hidden="true">
+
+4. Explicitwait based on titlecontains
+	1. Set the time interval explicitly so that the process will continue till the time ends.
+	2. It uses WebDriverWait class to apply wait.
+
+5. Get the title should be same as search term
+	1. Store all the titles that is containing the search term using class name "ellip"
+		<div class="ellip">What is Automation Testing (Ultimate Guide to Start Test ...</div>
+	2. Get the text and display the titles.
+
+
+Case Study 6:// Example for FindElements
+
+ 1. The user should be on Amazon.in  "https://www.amazon.in/"
+
+ 2. The user should select 'Books' from the category select / list box
+            
+	1. Identify the select box
+                name="url"
+            
+	2. Select the value called 'Books'
+        
+3. The user should type 'Da Vinci code' books in search text box
+            
+	1. Identify the Search text box
+                id="twotabsearchtextbox"
+            
+	2. Type the string input "Da Vinci Code' Books
+        
+4. The user should click on the magnifier button
+            
+	1. Identify the button with magnifier symbol
+                //input[@tabindex = '10']
+            
+	2. The button should be clicked    
+        
+5. The user should get titles and prices of all the items listed on the page
+            
+	1. Identify the common property that all the elements are sharing for title and price for the searched text  
+ 
+ 		class name='a-size-medium a-color-base a-text-normal' , 'a-price-whole'           
+	2. Get the text for the title and price on the element and print using SYSO command...
+    
+
+
+Case Study 7: // Working with Select /List object
+1. Goto Newtours --> http://newtours.demoaut.com/
+
+2. Enter Login Credential of Username & Password as "mercury"
+	1. Identify the field to enter username
+	2. Type the input string as "mercury" in that field
+	3. Identify the field to enter password
+	4. Type the input string as "mercury" in that field
+			<input  name="userName">
+			<input name="password" >
+
+3. Click on Signin Button
+	1. Identify the sign in button
+	2. Click the sign in button to continue with the process
+		<input name="login" >
+
+4. Select the passengers count as "4" using select object by index
+	1. Identify the select box       	<select name="passCount"></select>
+	2. Select the value by index as "4"
+
+5. Select Departure location, Month & Date using select by Value
+	1. Identify the select box       	<select name="fromPort"></select><select name="fromDay"></select><select name="fromMonth"></select>
+	2. Select the respective values as it is mentioned in the select tag 
+
+6. Select Arrival location, Month,& Date  using select by Visible Text
+	1. Identify the select box       	<select name="toPort"></select><select name="toDay"></select><select name="toMonth"></select>
+	2. Select the respective values as it is mentioned in the select tag 
+
+7. Click on Continue booking the flight ticket.
+	1. Identify the continue button
+	2. Click the continue button.
+		<input  name="findFlights" >
+
+
+Case Study 8:
+
+1. Goto Newtours --> http://newtours.demoaut.com/
+
+2. Enter Login Credential of Username & Password as "mercury"
+	1. Identify the field to enter username
+	2. Type the input string as "mercury" in that field
+	3. Identify the field to enter password
+	4. Type the input string as "mercury" in that field
+			<input  name="userName">
+			<input name="password" >
+	5. Click sign in button
+3. Verify the default values selected in the Departing from is not same as Arriving In select box
+	1. Get the default values that is in the dropdown box using the getFirstSelectedOption() method
+			name="fromPort" name="toPort"
+	2. Compare the values and print the results as "same" or "different" in the console
+
+
+Case Study 9:
+1. Goto Newtours --> http://newtours.demoaut.com/
+
+2. Verify the Height & Width of Username & Password text box is same.
+	1. Identify the username and password field for finding the locator 
+			<input  name="userName">
+			<input name="password" >
+	2. Use the method getSize() method to find the heigth and width
+	3. Compare the datas that of both the fields and print as "Same" or "Different" in the console 
+		
+
+Case study 10:
+1. Goto Google search engine --> https://google.com/
+
+2. Search for any term/word
+	1. Find the search box
+	2. Type the term that is to be searched "selenium"
+
+3. Capture the data in autosuggest window and print it.
+	1. Locate the webelement with the unique locator 	class='erkvQe'
+	2. List all the suggestions that is been suggested by the google search engine and print it in the console
+
+
+
+Case Study 11:
+
+Working With Multiple Window of a Browser
+1. Goto Gmail Create account URL
+		https://accounts.google.com/
+
+2.  Click on Term of Service
+	1. Identify "Term" link text and find the unique locator
+	2. Click on the "Term" link
+3.  Click on Privacy Policy
+	1. Identify "Privacy" link text and find the unique locator
+	2. Click on the "Privacy" link
+
+4. After all the windows are opened fetch the title & all the links avialable in each of the window
+	1. Get all the titles of the window using the getWindowHandles() method and then traverse to get all the title.
+
+ 
+*Case Study 12:
+Explicit wait using
+1. titleContains
+
+2. titleIs
+
+3. ExpectedConditions.presenceOfElementLocated(locator)
+
+
+Case Study : 13
+
+1. Goto http://www.fedex.com/sg/
+		<span aria-hidden="true" class="fxg-user-options__sign-in-text" tabindex="-1">Sign Up/Log In </span>
+2. Verify whther the User ID & Password text box is available or not?
+3. Get & Print the already available default text avaialable User ID & Password Text box & Set new value.
+4. Get & Print the default text available on the list object & Select any one item in the list box
+5. Verify the Remember me check box, should be selected by default.
+6. Click on the Login button using Submit().
+
+
+Case Study : 14
+
+1. Goto http://www.destinationqa.com/aut/sample.html
+
+2. Get total no. of Text boxes avaialable.
+3. Get & Print the default text on the address text box
+
+Case Study 15
+
+1. Goto the Specific URL --> popup.html
+2. Click on Tryit Button
+3. get the text on the pop up window
+4.Accept the pop up window
+5. Click again on the tryit button
+6. Dismiss the pop up window
+
+*Case Study 16:
+
+1.	Launch the URL --> popup2.html
+2.	Click on “Click on me” Button.
+3.	Get Text on the pop up window
+4.	Accept / Dismiss pop up
+5.	Get the confirmation message based on accept / dismiss 
+6.	Verify whether it is an accept / dismiss alert, based on the confirmation message & print in console. 
+
+*Case Study 17:
+
+1.	Launch the URL --> Popup3.html
+2.	Click on “Click on me” Button.
+3.	Enter the text in the Text box
+4.	Click OK Button.
+5.	Get the confirmation message & print in console.
+
+Case Study 18:
+
+1. Goto Newtours --> http://newtours.demoaut.com/
+
+2. Enter Login Credential of Username & Password as "mercury"
+	1. Identify the field to enter username
+	2. Type the input string as "mercury" in that field
+	3. Identify the field to enter password
+	4. Type the input string as "mercury" in that field
+			<input  name="userName">
+			<input name="password" >
+3. Click sign in button
+
+Check if  'India' is present or not in the Departing from list box.
+
+
